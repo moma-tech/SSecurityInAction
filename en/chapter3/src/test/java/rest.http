@@ -2,8 +2,4 @@
 #curl http://localhost:8080/hello
 
 ## 200
-#curl -u user:f5364413-3157-4347-8ebb-60acbf085806 http://localhost:8080/hello
-
-## Http Basic Underline 
-## echo -n user:f5364413-3157-4347-8ebb-60acbf085806 | base64  >> dXNlcjpmNTM2NDQxMy0zMTU3LTQzNDctOGViYi02MGFjYmYwODU4MDY
-#curl -H "Authorization: Basic dXNlcjpmNTM2NDQxMy0zMTU3LTQzNDctOGViYi02MGFjYmYwODU4MDY=" http://localhost:8080/hello
+#curl -u ivan:123456 http://localhost:8080/hello
