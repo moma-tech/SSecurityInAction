@@ -1,0 +1,21 @@
+dn: dc=mmtech,dc=top
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: mmtech
+
+dn: ou=people,dc=mmtech,dc=top
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=ivan,ou=people,dc=mmtech,dc=top
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Ivan D
+sn: Ivan
+uid: ivan
+userPassword: 12345
+description: Geek..
