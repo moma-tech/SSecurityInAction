@@ -38,17 +38,18 @@ public class ProjectConfig {
             throws Exception {
         http.httpBasic();
         http.authorizeHttpRequests().anyRequest().authenticated();
+        http.authenticationProvider(customAuthenticationProvider);
         return http.build();
     }
 
     @Autowired
     CustomAuthenticationProvider customAuthenticationProvider;
 
-    @Bean
-    AuthenticationManager authenticationManager(
-            AuthenticationManagerBuilder builder) throws Exception {
-        return builder.authenticationProvider(customAuthenticationProvider)
-                .build();
-    }
+    // @Bean
+    // AuthenticationManager authenticationManager(
+    //         AuthenticationManagerBuilder builder) throws Exception {
+    //     return builder.authenticationProvider(customAuthenticationProvider)
+    //             .build();
+    // }
 
 }
