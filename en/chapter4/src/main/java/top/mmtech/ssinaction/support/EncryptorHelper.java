@@ -1,9 +1,7 @@
 package top.mmtech.ssinaction.support;
 
-import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
-import javax.print.DocFlavor.READER;
 import org.springframework.security.crypto.encrypt.BytesEncryptor;
 import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.security.crypto.encrypt.TextEncryptor;
