@@ -10,6 +10,7 @@ public class InMemoryuserDetailsService implements UserDetailsService {
 
     private final List<SimpleUser> users;
 
+    
     public InMemoryuserDetailsService(List<SimpleUser> users) {
         this.users = users;
     }
