@@ -1,0 +1,5 @@
+## 401
+#curl http://localhost:8080/hello
+
+## 200
+#curl -u ivan:123456 http://localhost:8080/hello

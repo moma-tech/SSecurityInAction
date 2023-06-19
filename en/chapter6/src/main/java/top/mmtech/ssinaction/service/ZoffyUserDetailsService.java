@@ -12,22 +12,16 @@ import top.mmtech.ssinaction.repo.UserRepository;
 @Service
 public class ZoffyUserDetailsService implements UserDetailsService {
 
-        @Autowired
-        private UserRepository userRepository;
+  @Autowired private UserRepository userRepository;
 
-        @Override
-        public ZoffyUserDetails loadUserByUsername(String username)
-                        throws UsernameNotFoundException {
+  @Override
+  public ZoffyUserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-                Supplier<UsernameNotFoundException> usernameNotFoundException =
-                                () -> new UsernameNotFoundException(
-                                                "Authentication Faild");
+    Supplier<UsernameNotFoundException> usernameNotFoundException =
+        () -> new UsernameNotFoundException("Authentication Faild");
+    Users users =
+        userRepository.findUserByUsername(username).orElseThrow(usernameNotFoundException);
 
-                Users users = userRepository.findUserByUsername(username)
-                                .orElseThrow(usernameNotFoundException);
-
-                return new ZoffyUserDetails(users);
-
-        }
-
+    return new ZoffyUserDetails(users);
+  }
 }
